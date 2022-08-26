@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0%;
+      padding: 0%;
+    }
+    .container{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .testout{
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      position: absolute;
+      border: 2px solid #eef1f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      box-shadow:15px 15px 20px rgba(0, 0, 0, 0.1), 
+                -15px -15px 20px rgb(255, 255, 255);
+    }
+    .test{
+      width: 200px;
+      height: 200px;
+      /* border: solid 2px #8AC007; */
+      border-radius: 50%;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: lightblue;
+      /* background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%); */
+      /* animation: identifier 2.5s linear infinite; */
+      animation: identifier 4s ease-in-out infinite;
+    }
+  .ball{
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 15px;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    transform: translateY(158px);
+    box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgb(255, 255, 255);
+    /* background-color: lightblue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  @keyframes identifier {
+    0% {
+      transform: rotate(0deg);
+      filter: hue-rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+      filter: hue-rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+      filter: hue-rotate(360deg);
+    }
+  }
+  .test2{
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.993);
+    box-shadow:inset -5px -5px 5px rgba(255, 255, 255, 0.5), 
+              inset 5px 5px 5px rgba(0, 0, 0, 0.5);
+  }
+  p{
+    margin-top: -320px;
+    color: #525151;
+    z-index: 1;
+    font-size: 30px;
+  }
+  </style>
+</head>
+<body class="container">
+  <p>加载动画</p>
+  <div class="testout">
+    <div class="test">
+      <div class="ball"></div>
+    </div>
+  </div>
+  <div class="test2"></div>
+</body>
+</html>
